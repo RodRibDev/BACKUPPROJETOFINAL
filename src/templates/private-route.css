@@ -1,0 +1,9 @@
+.container-private {
+    display: flex;
+}
+.nav-ap {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
