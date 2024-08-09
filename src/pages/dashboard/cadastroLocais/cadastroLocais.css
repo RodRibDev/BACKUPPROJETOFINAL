@@ -1,0 +1,19 @@
+.container-cadastroLocais {
+    height: 100vh;
+    width: 100%;
+    padding: 0px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .formSignin {
+    max-width: 720px;
+    padding: 1rem;
+  }
+  
+  .logoCadastro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
