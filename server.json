@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "nome": "Ana Silva",
+      "sexo": "Feminino",
+      "cpf": "123.456.789-10",
+      "data_nascimento": "1990-03-15",
+      "email": "ana.silva@example.com",
+      "senha": "senha123",
+      "cep": "01001-000",
+      "rua": "Praça da Sé",
+      "bairro": "Sé",
+      "cidade": "São Paulo",
+      "uf": "SP"
+    },
+    {
+      "nome": "Carlos Pereira",
+      "sexo": "Masculino",
+      "cpf": "234.567.890-11",
+      "data_nascimento": "1985-06-20",
+      "email": "carlos.pereira@example.com",
+      "senha": "12345carlos",
+      "cep": "20010-000",
+      "rua": "Avenida Presidente Vargas",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ"
+    },
+    {
+      "nome": "Carlos Pereira",
+      "sexo": "Masculino",
+      "cpf": "234.567.890-11",
+      "data_nascimento": "1985-06-20",
+      "email": "carlos.pereira@example.com",
+      "senha": "12345carlos",
+      "cep": "20010-000",
+      "rua": "Avenida Presidente Vargas",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ"
+    },
+    {
+      "nome": "Carlos Pereira",
+      "sexo": "Masculino",
+      "cpf": "234.567.890-11",
+      "data_nascimento": "1985-06-20",
+      "email": "carlos.pereira@example.com",
+      "senha": "12345carlos",
+      "cep": "20010-000",
+      "rua": "Avenida Presidente Vargas",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ"
+    },
+    {
+      "nome": "Carlos Pereira",
+      "sexo": "Masculino",
+      "cpf": "234.567.890-11",
+      "data_nascimento": "1985-06-20",
+      "email": "carlos.pereira@example.com",
+      "senha": "12345carlos",
+      "cep": "20010-000",
+      "rua": "Avenida Presidente Vargas",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ"
+    }
+  ],
+  "locais": [
+    {
+      "nome": "Praia da Pinheira",
+      "descricao": "Uma praia incrível chamada praia da Pinheira",
+      "usuario": "Usuário 01",
+      "CEP": "05424020",
+      "latitude": "-23.5703026",
+      "longitude": "-46.6967364"
+    },
+    {
+        "nome": "Praia Brava",
+        "descricao": "Uma praia incrível chamada praia Brava",
+        "usuario": "Usuário 01",
+        "CEP": "05424020",
+        "latitude": "-23.5703026",
+        "longitude": "-46.6967364"
+      },
+      {
+        "nome": "Praia da Galheta",
+        "descricao": "Uma praia incrível chamada praia da Galheta",
+        "usuario": "Usuário 01",
+        "CEP": "05424020",
+        "latitude": "-23.5703026",
+        "longitude": "-46.6967364"
+      },
+      {
+        "nome": "Praia Mole",
+        "descricao": "Uma praia incrível chamada praia Mole",
+        "usuario": "Usuário 01",
+        "CEP": "05424020",
+        "latitude": "-23.5703026",
+        "longitude": "-46.6967364"
+      },
+      {
+        "nome": "Praia de Canasvieiras",
+        "descricao": "Uma praia incrível chamada praia de Canasvieiras",
+        "usuario": "Usuário 01",
+        "CEP": "05424020",
+        "latitude": "-23.5703026",
+        "longitude": "-46.6967364"
+      }
+  ]
+}
