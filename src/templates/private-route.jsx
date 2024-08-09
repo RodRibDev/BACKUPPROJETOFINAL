@@ -18,10 +18,10 @@ export function TemplatePrivateRoute() {
             <Link to="/dashboard" className="app-link">Home</Link>
           </li>
           <li>
-            <Link to="/cadastroLocais" className="app-link">Cadastre Locais</Link>
+            <Link to="/dashboard/cadastroLocais" className="app-link">Cadastre Locais</Link>
           </li>
           <li>
-            <Link to="/listaLocais" className="app-link">Lista</Link>
+            <Link to="/dashboard/listaLocais" className="app-link">Lista</Link>
           </li>
         </ul>
         </div>
