@@ -13,8 +13,14 @@ export function LoginPage() {
 
   async function onSubmit(dados) {
     try {
-      await signIn(dados);
+     const isSucess = await signIn(dados);
+    
+    if (isSucess){
       navigate("/dashboard");
+    } else {
+      alert('Email ou senha inválidos')
+    }
+
     } catch (error) {
       alert(error);
     }
@@ -44,7 +50,7 @@ export function LoginPage() {
                 },
               })}
             />
-            <label htmlFor="floatingInput">Email address</label>
+            <label htmlFor="floatingInput">Insira seu email</label>
           </div>
           {errors.email && (
             <span className="text-danger text-sm">{errors.email.message}</span>
@@ -55,9 +61,14 @@ export function LoginPage() {
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
-              {...register("password")}
+              {...register("senha",{
+                required: {
+                  value: true,
+                  message: "A senha é obrigatória",
+                },
+              })}
             />
-            <label htmlFor="floatingPassword">Password</label>
+            <label htmlFor="floatingPassword">Insira sua senha</label>
           </div>
           <button
             className="btn btn-success w-100 py-2"
