@@ -8,7 +8,7 @@ export const AuthContext = createContext({
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(() => {
-        const userLoggedStorage = localStorage.getItem('@nature365:userLogged')
+        const userLoggedStorage = localStorage.getItem('@nature365:user')
 
         if(userLoggedStorage) {
             return JSON.parse(userLoggedStorage)
@@ -18,10 +18,8 @@ export function AuthProvider({ children }) {
     })
 
     async function signIn(data) {
-        console.log(data.email, data.senha)
         const response = await fetch(`http://localhost:3333/users?email=${data.email}`);
         const userdata = await response.json()
-        console.log(userdata)
         
         if(userdata.length > 0 && userdata[0].senha === data.senha){
             setUser(userdata)
