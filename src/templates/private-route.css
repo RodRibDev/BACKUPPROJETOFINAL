@@ -1,7 +1,6 @@
 .container-private {
     display: flex;
     box-sizing: border-box;
-    height: 100vh;
 }
 .nav-ap {
     background-color: black;
