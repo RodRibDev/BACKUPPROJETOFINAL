@@ -11,6 +11,7 @@ export function AppRoutes() {
         <Routes>
             
             <Route path="/" element={<LoginPage />}/>
+            <Route path="/login" element={<LoginPage />}/>
             <Route path="/cadastro" element={<CadastroPage />} />
             
             <Route path="/dashboard" element={<TemplatePrivateRoute />}>

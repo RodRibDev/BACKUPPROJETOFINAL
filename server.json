@@ -14,12 +14,12 @@
       "uf": "SP"
     },
     {
-      "nome": "Carlos Pereira",
+      "nome": "Carlosa",
       "sexo": "Masculino",
-      "cpf": "234.567.890-11",
+      "cpf": "534.567.890-11",
       "data_nascimento": "1985-06-20",
-      "email": "carlos.pereira@example.com",
-      "senha": "12345carlos",
+      "email": "carlos@example.com",
+      "senha": "52345carlos",
       "cep": "20010-000",
       "rua": "Avenida Presidente Vargas",
       "bairro": "Centro",
@@ -27,43 +27,53 @@
       "uf": "RJ"
     },
     {
-      "nome": "Carlos Pereira",
+      "nome": "Pereira",
       "sexo": "Masculino",
-      "cpf": "234.567.890-11",
+      "cpf": "254.567.890-11",
       "data_nascimento": "1985-06-20",
-      "email": "carlos.pereira@example.com",
-      "senha": "12345carlos",
+      "email": "ereira@example.com",
+      "senha": "92345carlos",
       "cep": "20010-000",
       "rua": "Avenida Presidente Vargas",
       "bairro": "Centro",
       "cidade": "Rio de Janeiro",
-      "uf": "RJ"
+      "uf": "SC"
     },
     {
-      "nome": "Carlos Pereira",
+      "nome": "Carlitos",
       "sexo": "Masculino",
       "cpf": "234.567.890-11",
       "data_nascimento": "1985-06-20",
-      "email": "carlos.pereira@example.com",
-      "senha": "12345carlos",
+      "email": "carlitos@example.com",
+      "senha": "99345carlos",
       "cep": "20010-000",
       "rua": "Avenida Presidente Vargas",
       "bairro": "Centro",
       "cidade": "Rio de Janeiro",
-      "uf": "RJ"
+      "uf": "RS"
     },
     {
-      "nome": "Carlos Pereira",
+      "nome": "Carlinhos",
       "sexo": "Masculino",
       "cpf": "234.567.890-11",
       "data_nascimento": "1985-06-20",
-      "email": "carlos.pereira@example.com",
-      "senha": "12345carlos",
+      "email": "carlinhos@example.com",
+      "senha": "12399carlos",
       "cep": "20010-000",
       "rua": "Avenida Presidente Vargas",
       "bairro": "Centro",
       "cidade": "Rio de Janeiro",
-      "uf": "RJ"
+      "uf": "BA"
+    },
+    {
+      "id": "0209",
+      "nome": "Teste 01",
+      "sexo": "Masc",
+      "cpf": "00100100102",
+      "dataNascimento": "1979-06-06",
+      "senha": "234",
+      "endereco": "88070101",
+      "email": "teste@email.com"
     }
   ],
   "locais": [
@@ -76,36 +86,36 @@
       "longitude": "-46.6967364"
     },
     {
-        "nome": "Praia Brava",
-        "descricao": "Uma praia incrível chamada praia Brava",
-        "usuario": "Usuário 01",
-        "CEP": "05424020",
-        "latitude": "-23.5703026",
-        "longitude": "-46.6967364"
-      },
-      {
-        "nome": "Praia da Galheta",
-        "descricao": "Uma praia incrível chamada praia da Galheta",
-        "usuario": "Usuário 01",
-        "CEP": "05424020",
-        "latitude": "-23.5703026",
-        "longitude": "-46.6967364"
-      },
-      {
-        "nome": "Praia Mole",
-        "descricao": "Uma praia incrível chamada praia Mole",
-        "usuario": "Usuário 01",
-        "CEP": "05424020",
-        "latitude": "-23.5703026",
-        "longitude": "-46.6967364"
-      },
-      {
-        "nome": "Praia de Canasvieiras",
-        "descricao": "Uma praia incrível chamada praia de Canasvieiras",
-        "usuario": "Usuário 01",
-        "CEP": "05424020",
-        "latitude": "-23.5703026",
-        "longitude": "-46.6967364"
-      }
+      "nome": "Praia Brava",
+      "descricao": "Uma praia incrível chamada praia Brava",
+      "usuario": "Usuário 01",
+      "CEP": "05424020",
+      "latitude": "-23.5703026",
+      "longitude": "-46.6967364"
+    },
+    {
+      "nome": "Praia da Galheta",
+      "descricao": "Uma praia incrível chamada praia da Galheta",
+      "usuario": "Usuário 01",
+      "CEP": "05424020",
+      "latitude": "-23.5703026",
+      "longitude": "-46.6967364"
+    },
+    {
+      "nome": "Praia Mole",
+      "descricao": "Uma praia incrível chamada praia Mole",
+      "usuario": "Usuário 01",
+      "CEP": "05424020",
+      "latitude": "-23.5703026",
+      "longitude": "-46.6967364"
+    },
+    {
+      "nome": "Praia de Canasvieiras",
+      "descricao": "Uma praia incrível chamada praia de Canasvieiras",
+      "usuario": "Usuário 01",
+      "CEP": "05424020",
+      "latitude": "-23.5703026",
+      "longitude": "-46.6967364"
+    }
   ]
 }
