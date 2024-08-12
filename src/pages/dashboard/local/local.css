@@ -1,0 +1,13 @@
+.main-contentLocal {
+    padding: 80px;
+
+}
+.local-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .local-link:hover {
+    font-weight: bold;
+  }
+  

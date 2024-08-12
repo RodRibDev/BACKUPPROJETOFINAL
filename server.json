@@ -1,6 +1,7 @@
 {
   "users": [
     {
+      "id": "0201",
       "nome": "Ana Silva",
       "sexo": "Feminino",
       "cpf": "123.456.789-10",
@@ -14,6 +15,7 @@
       "uf": "SP"
     },
     {
+      "id": "0202",
       "nome": "Carlosa",
       "sexo": "Masculino",
       "cpf": "534.567.890-11",
@@ -27,6 +29,7 @@
       "uf": "RJ"
     },
     {
+      "id": "0203",
       "nome": "Pereira",
       "sexo": "Masculino",
       "cpf": "254.567.890-11",
@@ -40,6 +43,7 @@
       "uf": "SC"
     },
     {
+      "id": "0203",
       "nome": "Carlitos",
       "sexo": "Masculino",
       "cpf": "234.567.890-11",
@@ -53,6 +57,7 @@
       "uf": "RS"
     },
     {
+      "id": "0204",
       "nome": "Carlinhos",
       "sexo": "Masculino",
       "cpf": "234.567.890-11",
@@ -78,42 +83,51 @@
   ],
   "locais": [
     {
+      "id": "0001",
       "nome": "Praia da Pinheira",
       "descricao": "Uma praia incrível chamada praia da Pinheira",
       "usuario": "Usuário 01",
-      "CEP": "05424020",
+      "cep": "05424020",
+      "rua": "Avenida Presidente Vargas",
+      "bairro": "Centro",
+      "cidade": "Rio de Janeiro",
+      "uf": "BA",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
     },
     {
+      "id": "0002",
       "nome": "Praia Brava",
       "descricao": "Uma praia incrível chamada praia Brava",
       "usuario": "Usuário 01",
-      "CEP": "05424020",
+      "cep": "05424020",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
     },
     {
+      "id": "0003",
       "nome": "Praia da Galheta",
       "descricao": "Uma praia incrível chamada praia da Galheta",
       "usuario": "Usuário 01",
-      "CEP": "05424020",
+      "cep": "05424020",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
     },
     {
+      "id": "0004",
       "nome": "Praia Mole",
       "descricao": "Uma praia incrível chamada praia Mole",
       "usuario": "Usuário 01",
-      "CEP": "05424020",
+      "cep": "05424020",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
     },
     {
+      "id": "0005",
       "nome": "Praia de Canasvieiras",
       "descricao": "Uma praia incrível chamada praia de Canasvieiras",
       "usuario": "Usuário 01",
-      "CEP": "05424020",
+      "cep": "05424020",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
     }

@@ -3,23 +3,30 @@ import "./login.css";
 import { useAuth } from "../../contexts/auth";
 import { useForm } from "react-hook-form";
 import imgLogin from "../../assets/imgLogin.png";
+import { useEffect } from "react";
 
 export function LoginPage() {
-  const { signIn } = useAuth();
+  const { signIn, user } = useAuth();
   const navigate = useNavigate();
   const { register, handleSubmit, formState } = useForm();
 
   const { errors, isSubmitting } = formState;
 
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
+
   async function onSubmit(dados) {
     try {
-     const isSucess = await signIn(dados);
+      const isSucess = await signIn(dados);
     
-    if (isSucess){
-      navigate("/dashboard");
-    } else {
-      alert('Email ou senha inválidos')
-    }
+      if (isSucess) {
+        navigate("/dashboard");
+      } else {
+        alert('Email ou senha inválidos');
+      }
 
     } catch (error) {
       alert(error);
@@ -75,7 +82,7 @@ export function LoginPage() {
             type="submit"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Carrengado..." : "Entrar"}
+            {isSubmitting ? "Carregando..." : "Entrar"}
           </button>
           <p className="mt-5 mb-3 text-body-secondary">
             Natureza365 &copy; 2024
