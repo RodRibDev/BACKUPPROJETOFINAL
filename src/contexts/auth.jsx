@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
 
     function signOut() {
         setUser(null)
-        localStorage.removeItem('@nature365:userLogged')
+        localStorage.removeItem('@nature365:user')
     }
 
     return <AuthContext.Provider value={{ user, signIn, signOut }}>{children}</AuthContext.Provider>
