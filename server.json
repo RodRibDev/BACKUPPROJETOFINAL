@@ -96,13 +96,16 @@
       "longitude": "-46.6967364"
     },
     {
-      "id": "0002",
       "nome": "Praia Brava",
       "descricao": "Uma praia incrível chamada praia Brava",
-      "usuario": "Usuário 01",
-      "cep": "05424020",
-      "latitude": "-23.5703026",
-      "longitude": "-46.6967364"
+      "cep": "88070101",
+      "rua": "Santos Saraiva",
+      "bairro": "Capoeiras",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "latitude": "-27.59796",
+      "longitude": "-48.58755",
+      "id": "0002"
     },
     {
       "id": "0003",
@@ -130,18 +133,6 @@
       "cep": "05424020",
       "latitude": "-23.5703026",
       "longitude": "-46.6967364"
-    },
-    {
-      "id": "82c1",
-      "nome": "Capoeiras",
-      "descricao": "É o bairro onde eu moro. Bem legal ! Eu gosto bastante !",
-      "cep": "88070101",
-      "rua": "Santos Saraiva",
-      "bairro": "Capoeiras",
-      "cidade": "Florianópolis",
-      "uf": "SC",
-      "latitude": "-27.59796",
-      "longitude": "-48.58755"
     }
   ]
 }
