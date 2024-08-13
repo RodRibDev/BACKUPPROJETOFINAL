@@ -40,7 +40,7 @@ export function ListaLocais() {
 
     return (
         <div className="main-content">
-            <div className="table-container">
+            <div className="table-containerLista">
                 <h2>Locais Cadastrados</h2>
                 <p>Listagem e edição das localidades cadastradas</p>
                 <table>

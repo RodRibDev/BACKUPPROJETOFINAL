@@ -197,7 +197,7 @@ export function CadastroLocais() {
               Latitude
             </label>
             <input
-              type="text"
+              type="string"
               className="form-control"
               id="latitude"
               placeholder="Insira a Latitude"
@@ -215,7 +215,7 @@ export function CadastroLocais() {
               Longitude
             </label>
             <input
-              type="text"
+              type="string"
               className="form-control"
               id="longitude"
               placeholder="Insira a Longitude"
