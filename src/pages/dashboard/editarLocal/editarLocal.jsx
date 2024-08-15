@@ -1,5 +1,4 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import "./editarLocal.css";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 
@@ -97,7 +96,7 @@ export function EditarLocal() {
   }
 
   return (
-    <main className="container-cadastroLocais">
+    <div className="main-content">
       <div className="formSignin">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h1 className="h3 mb-3 fw-normal">
@@ -274,6 +273,6 @@ export function EditarLocal() {
           </p>
         </form>
       </div>
-    </main>
+    </div>
   );
 }
