@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./listaLocais.css";
 import { useState, useEffect } from "react";
 
 export function ListaLocais() {

@@ -61,7 +61,7 @@ export function CadastroPage() {
     }
 
     return (
-        <main className='container-cadastro'>
+        <div className='container-cadastro'>
             <div className='formSignin'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='logoCadastro'>
@@ -209,6 +209,6 @@ export function CadastroPage() {
                     <p>Já possui cadastro? <Link to="/login" className="custom-link">Efetuar login</Link></p>
                 </form>
             </div>
-        </main>
+        </div>
     );
 }
