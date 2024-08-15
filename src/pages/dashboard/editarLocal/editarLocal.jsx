@@ -70,9 +70,9 @@ export function EditarLocal() {
 
   async function onSubmit(data) {
     try {
-      const userLoggedStorage = localStorage.getItem("@nature365:user");
+      const userLoggedStorage = localStorage.getItem('@nature365:user');
       if (userLoggedStorage) {
-        const user = JSON.parse(userLoggedStorage);
+        const user = JSON.parse(userLoggedStorage)[0];
         data.usuario = user.nome;
       }
 

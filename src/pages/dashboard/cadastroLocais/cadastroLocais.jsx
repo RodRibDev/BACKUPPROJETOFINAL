@@ -19,7 +19,6 @@ export function CadastroLocais() {
             `https://cep.awesomeapi.com.br/json/${cep}`
           );
           const data = await cepresponse.json();
-          console.log(data);
 
           if (data.address_name) {
             setValue("rua", data.address_name);
@@ -44,13 +43,14 @@ export function CadastroLocais() {
 
   async function onSubmit(data) {
     try {
-        
-        const userLoggedStorage = localStorage.getItem('@nature365:user');
-        if (userLoggedStorage) {
-            const user = JSON.parse(userLoggedStorage);
-            data.usuario = user.nome;
-        }
-        const response = await fetch("http://localhost:3333/locais", {
+
+      const userLoggedStorage = localStorage.getItem('@nature365:user');
+      if (userLoggedStorage) {
+        const user = JSON.parse(userLoggedStorage)[0];
+        data.usuario = user.nome;
+      }
+
+      const response = await fetch("http://localhost:3333/locais", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -250,3 +250,4 @@ export function CadastroLocais() {
     </div>
   );
 }
+
