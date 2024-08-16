@@ -55,7 +55,7 @@ export function ListaLocais() {
                         {locais.map((local) => (
                             <tr key={local.id}>
                                 <td>
-                                    <Link to={`/dashboard/local/${local.id}`} className="custom-link">
+                                    <Link to={`/dashboard/local/${local.id}`} className="app-link2">
                                         {local.nome}
                                     </Link>
                                 </td>

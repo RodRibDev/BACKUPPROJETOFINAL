@@ -88,7 +88,14 @@
     font-weight: 600;
 }
 
-.app-link:hover {
+.app-link2 {
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.app-link:hover, .app-link2:hover {
     color: #30a12c;
 }
 
