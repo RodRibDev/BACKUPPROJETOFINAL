@@ -1,9 +1,27 @@
 .main-contentLocal {
-    padding: 80px;
-    display: flex;
+  padding: 40px;
+  display: flex;
+  gap: 30px;
 }
+
 .info-local {
   width: 900px;
 }
 
-  
+.mapa-locais {
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .main-contentLocal {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .info-local, .mapa-locais {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}

@@ -64,7 +64,7 @@ export function HomePage() {
                       {local.nome}
                     </Link>
                   </td>
-                  <td>{local.descricao}</td>
+                  <td>{local.descricao}`</td>
                 </tr>
               ))}
             </tbody>
