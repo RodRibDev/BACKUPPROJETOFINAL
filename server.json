@@ -69,6 +69,20 @@
       "bairro": "Centro",
       "cidade": "Florianópolis",
       "uf": "SC"
+    },
+    {
+      "id": "bd18",
+      "nome": "Teste CPF",
+      "sexo": "masculino",
+      "cpf": "100100100",
+      "dataNascimento": "1979-06-06",
+      "email": "testecpf@email.com",
+      "senha": "234",
+      "cep": "88070101",
+      "rua": "Santos Saraiva",
+      "bairro": "Capoeiras",
+      "cidade": "Florianópolis",
+      "uf": "SC"
     }
   ],
   "locais": [

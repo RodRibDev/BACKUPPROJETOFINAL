@@ -41,6 +41,15 @@ export function CadastroPage() {
 
     async function onSubmit(data) {
         try {
+            
+            const cpfResponse = await fetch(`http://localhost:3333/users?cpf=${data.cpf}`);
+            const cpfData = await cpfResponse.json();
+
+            if (cpfData.length > 0) {
+                alert("CPF já cadastrado no sistema.");
+                return;
+            }
+
             const response = await fetch("http://localhost:3333/users", {
                 method: "POST",
                 headers: {
@@ -212,3 +221,4 @@ export function CadastroPage() {
         </div>
     );
 }
+
