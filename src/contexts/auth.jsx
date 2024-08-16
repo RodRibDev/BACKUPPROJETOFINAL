@@ -20,7 +20,6 @@ export function AuthProvider({ children }) {
     async function signIn(data) {
         const response = await fetch(`http://localhost:3333/users?email=${data.email}`);
         const userdata = await response.json()
-        console.log(userdata)
         
         if(userdata.length > 0 && userdata[0].senha === data.senha){
             setUser(userdata)
