@@ -8,6 +8,7 @@ Bem-vindo ao Natureza365. Esta é uma plataforma dedicada à preservação da na
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação e Execução](#instalação-e-execução)
+- [Usuários e locais](#usuários-e-locais)
 - [Estrutura das Páginas](#estrutura-das-páginas)
 - [Aprendizados](#aprendizados)
 - [Possíveis Melhorias](#possíveis-melhorias)
@@ -65,7 +66,7 @@ Para rodar o **Natureza365** em seu ambiente local, siga os passos abaixo:
 
 4. Inicie o JSON Server para a simulação da API:
    ```bash
-   npm run Server
+   npm run server
 
 5. Acesse a aplicação em **http://localhost:5173**
 
