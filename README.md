@@ -2,6 +2,7 @@
 
 Bem-vindo ao Natureza365. Esta é uma plataforma dedicada à preservação da natureza, permitindo aos usuários explorar, cadastrar e compartilhar informações sobre áreas naturais, trilhas, parques ecológicos, reservas ambientais e outros locais de interesse para amantes da natureza.
 
+
 ## Sumário
 
 - [Sobre o Projeto](#sobre-o-projeto)
@@ -13,10 +14,13 @@ Bem-vindo ao Natureza365. Esta é uma plataforma dedicada à preservação da na
 - [Aprendizados](#aprendizados)
 - [Possíveis Melhorias](#possíveis-melhorias)
 - [Screenshots](#screenshots)
+- [Histórico GITFLOW](#histórico-gitflow)
+
 
 ## Sobre o Projeto
 
 **Natureza365** foi desenvolvido com o objetivo de incentivar a preservação ambiental por meio de uma plataforma colaborativa onde os usuários podem cadastrar locais de preservação da natureza e explorar os já existentes. A aplicação facilita o compartilhamento de informações sobre áreas preservadas e permite que os usuários contribuam para a conscientização e preservação desses locais.
+
 
 ## Funcionalidades
 
@@ -27,6 +31,7 @@ Bem-vindo ao Natureza365. Esta é uma plataforma dedicada à preservação da na
 - **Dashboard**: Exibição de um resumo dos usuários e locais cadastrados, além de uma visão geral dos dados da plataforma.
 - **Mapas e markers**: Exibição de um mapa na página home com todos os locais identificados com markers próprios que ao serem clicados exibem o nome e a descrição do local. Exibição também de um mapa único quando a página de um local específico é visualizado.
 - **Responsividade**: Todas as páginas do sistema são responsivas e se adapatam aos diferentes tamanhos de tela.
+
 
 ## Tecnologias Utilizadas
 
@@ -40,6 +45,7 @@ A aplicação foi desenvolvida utilizando as seguintes tecnologias e bibliotecas
 - **JSON Server**: Simulação de uma API REST para persistência de dados durante o desenvolvimento.
 - **Vite**: Ferramenta de build e servidor de desenvolvimento.
 - **ESLint**: Ferramenta para análise de código estático e garantia de boas práticas.
+
 
 ## Instalação e Execução
 
@@ -70,6 +76,7 @@ Para rodar o **Natureza365** em seu ambiente local, siga os passos abaixo:
 
 5. Acesse a aplicação em **http://localhost:5173**
 
+
 ## Usuários e locais
 
 Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários e locais já salvos para facilicar a visualização da aplicação em funcionamento. Caso não deseje criar um novo usuário os seguintes usuários e senhas podem ser utilizados para efetuar o login:
@@ -88,6 +95,7 @@ Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários 
 
 **email**: usuario05@email.com
 **senha**: usuario05
+
 
 ## Estrutura das páginas
 
@@ -121,7 +129,6 @@ Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários 
 - Formulário já preenchido com os dados do local com possibilidade alteração de informações.
 
 
-
 ## Aprendizados
 
 A construção da aplicação colocou em prática e aprimorou os conhecimentos em programação como:
@@ -150,3 +157,8 @@ A aplicação poderia ter também um sistema de busca para que o usuário possa 
 ![App Screenshot Dashboard](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/03_smimlt.png)
 ![App Screenshot Mapa e Responsividade](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/04_of3zzy.png)
 ![App Screenshot Lista Responsiva](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/05_p7lbtv.png)
+
+
+## Histórico Gitflow
+
+![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
