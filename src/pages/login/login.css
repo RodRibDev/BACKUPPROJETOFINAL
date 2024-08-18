@@ -6,36 +6,40 @@
   justify-content: center;
   background-color: rgb(17, 30, 6);
 }
+
 .formSignin-login {
   max-width: 720px;
   height: 100vh;
   padding: 18rem 6rem;
   background-color: white;
   align-items: center;
-}
-
-
-.formSignin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.formSignin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 10px;
 }
 
 .imgLogin {
   height: 100vh;
 }
 
-.custom-link {
-  text-decoration: none;
-  color: #11640e;
-}
+@media (max-width: 768px) {
+  .container-login {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: url('../../assets/imgLogin.png') no-repeat center center;
+    background-size: cover;
+  }
 
-.custom-link:hover {
-  color: #25a220;
+  .formSignin-login {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .imgLogin {
+    display: none;
+  }
 }

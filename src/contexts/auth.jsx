@@ -5,15 +5,10 @@ export const AuthContext = createContext({
     signIn: async () => {},
     signOut: () => {} 
 })
-// simular uma chamada para api => fetch
-async function apiAuth(url, data) {
-    console.log(url, data)
-    return new Promise(resolve => setTimeout(resolve, 3000))
-}
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(() => {
-        const userLoggedStorage = localStorage.getItem('@lab365:userLogged')
+        const userLoggedStorage = localStorage.getItem('@nature365:user')
 
         if(userLoggedStorage) {
             return JSON.parse(userLoggedStorage)
@@ -23,28 +18,23 @@ export function AuthProvider({ children }) {
     })
 
     async function signIn(data) {
+        const response = await fetch(`http://localhost:3333/users?email=${data.email}`);
+        const userdata = await response.json()
         
-        if(data.email !== "fulano@teste.com.br" || data.password !== "123") {
-            throw new Error("Email/Senha invalida")
-        }
-       
-        await apiAuth('https://api.lab365.com.br/sessions', data)
-        
-        const userResponse = {
-            id: Date.now(),
-            first_name: "Fulano de tal",
-            email: data.email,
+        if(userdata.length > 0 && userdata[0].senha === data.senha){
+            setUser(userdata)
+            localStorage.setItem('@nature365:user', JSON.stringify(userdata))
+            return true
+        } else {
+            return false
+
         }
 
-        setUser(userResponse)
-        localStorage.setItem('@lab365:userLogged', JSON.stringify(userResponse))
-        localStorage.setItem('@lab365:token', Date.now())
     }
 
     function signOut() {
         setUser(null)
-        localStorage.removeItem('@lab365:userLogged')
-        localStorage.removeItem('@lab365:token')
+        localStorage.removeItem('@nature365:user')
     }
 
     return <AuthContext.Provider value={{ user, signIn, signOut }}>{children}</AuthContext.Provider>
