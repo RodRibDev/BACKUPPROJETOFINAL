@@ -15,6 +15,7 @@ Bem-vindo ao Natureza365. Esta é uma plataforma dedicada à preservação da na
 - [Possíveis Melhorias](#possíveis-melhorias)
 - [Screenshots](#screenshots)
 - [Histórico GITFLOW](#histórico-gitflow)
+- [Video explicativo](#video-explicativo)
 
 
 ## Sobre o Projeto
@@ -162,3 +163,9 @@ A aplicação poderia ter também um sistema de busca para que o usuário possa 
 ## Histórico Gitflow
 
 ![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
+
+## Video explicativo
+
+Abaixo segue o link para o video explicativo da aplicação:
+
+https://drive.google.com/file/d/1lNz3z3286HH-w2hELqn9pFtOUt1e5uKz/view?usp=sharing

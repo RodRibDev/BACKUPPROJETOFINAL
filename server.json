@@ -69,20 +69,6 @@
       "bairro": "Centro",
       "cidade": "Florianópolis",
       "uf": "SC"
-    },
-    {
-      "id": "bd18",
-      "nome": "Teste CPF",
-      "sexo": "masculino",
-      "cpf": "100100100",
-      "dataNascimento": "1979-06-06",
-      "email": "testecpf@email.com",
-      "senha": "234",
-      "cep": "88070101",
-      "rua": "Santos Saraiva",
-      "bairro": "Capoeiras",
-      "cidade": "Florianópolis",
-      "uf": "SC"
     }
   ],
   "locais": [
@@ -137,19 +123,6 @@
       "latitude": "-27.39652",
       "longitude": "-48.42692",
       "usuario": "Usuário 03"
-    },
-    {
-      "id": "6cfc",
-      "nome": "Local 05",
-      "descricao": "Descrição do local 05 no local indicado para inserir a descrição dos locais na aplicação.",
-      "cep": "88058500",
-      "rua": "das Gaivotas",
-      "bairro": "Ingleses do Rio Vermelho",
-      "cidade": "Florianópolis",
-      "uf": "SC",
-      "latitude": "-27.60422",
-      "longitude": "-48.54638",
-      "usuario": "Usuário 04"
     }
   ]
 }
