@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
@@ -8,19 +9,23 @@ import { Marcadores } from "../../../components/Marcadores";
 const initialCoord = [-27.593754013143972, -48.565280761841805];
 
 export function HomePage() {
-  const [usersCount, setUsersCount] = useState(0);
+  const [loggedInUsersCount, setLoggedInUsersCount] = useState(0);
   const [locais, setLocais] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const responseUsers = await fetch("http://localhost:3333/users");
-        const usersData = await responseUsers.json();
-        setUsersCount(usersData.length);
+       
+        const responseUsers = await axios.get("http://localhost:3000/usuario");
+        console.log(responseUsers.data);
+      
+        const loggedInUsers = responseUsers.data.filter(user => user.loggedIn);
+        setLoggedInUsersCount(loggedInUsers.length);
 
-        const responseLocais = await fetch("http://localhost:3333/locais");
-        const locaisData = await responseLocais.json();
-        setLocais(locaisData);
+        const responseLocais = await axios.get("http://localhost:3000/local/all");
+        console.log(responseLocais.data.listarAll);
+        setLocais(responseLocais.data.listarAll);
+
       } catch (error) {
         console.error("Erro ao buscar os dados:", error);
       }
@@ -33,8 +38,8 @@ export function HomePage() {
     <div className="main-content">
       <div className="stats">
         <div className="card-stats">
-          <p style={{ color: "white" }}>Usuários</p>
-          <span className="fw-bolder fs-2">{usersCount}</span>
+          <p style={{ color: "white" }}>Usuários Logados</p>
+          <span className="fw-bolder fs-2">{loggedInUsersCount}</span>
         </div>
         <div className="card-stats">
           <p style={{ color: "white" }}>Locais</p>
@@ -64,13 +69,14 @@ export function HomePage() {
                       {local.nome}
                     </Link>
                   </td>
-                  <td>{local.descricao}`</td>
+                  <td>{local.descricao}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
+
       <div className="mapa-locais">
         <h2>Mapa</h2>
         <p>Localização dos locais cadastrados</p>
