@@ -35,13 +35,14 @@ export function NovaHome() {
     <div className="container-private">
 <Sidebar />
     <div className="home-content">
+    <img className="img-home" src="../public/imgHome.png" alt="Logo" />
             <div className="stats">
         <div className="card-stats">
           <p style={{ color: "white" }}>Usuários logados</p>
           <span className="fw-bolder fs-2">{usersCount}</span>
         </div>
         <div className="card-stats">
-          <p style={{ color: "white" }}>Locais</p>
+          <p style={{ color: "white" }}>Locais cadastrados</p>
           <span className="fw-bolder fs-2">{locais.length}</span>
         </div>
       </div>

@@ -11,9 +11,8 @@ import { NovaHome } from "../pages/novaHome/novaHome";
 
 export function AppRoutes() {
     return (
-        <Routes>
-            
-            <Route path="/" element={<LoginPage />}/>
+        <Routes>            
+            <Route path="/" element={<NovaHome />}/>
             <Route path="/login" element={<LoginPage />}/>
             <Route path="/cadastro" element={<CadastroPage />} />
             <Route path="/home" element={<NovaHome />} />
