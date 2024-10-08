@@ -32,10 +32,10 @@ export function NovaHome() {
   }, []);
 
   return (
- 
-    <div className="main-content">
-      <Sidebar />
-      <div className="stats">
+    <div className="container-private">
+<Sidebar />
+    <div className="home-content">
+            <div className="stats">
         <div className="card-stats">
           <p style={{ color: "white" }}>Usuários logados</p>
           <span className="fw-bolder fs-2">{usersCount}</span>
@@ -76,6 +76,7 @@ export function NovaHome() {
           <Marcadores locais={locais}></Marcadores>
         </MapContainer>
       </div>
+    </div>
     </div>
   );
 }
