@@ -7,6 +7,7 @@ import { CadastroLocais } from "../pages/dashboard/cadastroLocais/cadastroLocais
 import { ListaLocais } from "../pages/dashboard/listaLocais/listaLocais";
 import { Local } from "../pages/dashboard/local/local";
 import { EditarLocal } from "../pages/dashboard/editarLocal/editarLocal";
+import { NovaHome } from "../pages/novaHome/novaHome";
 
 export function AppRoutes() {
     return (
@@ -15,7 +16,8 @@ export function AppRoutes() {
             <Route path="/" element={<LoginPage />}/>
             <Route path="/login" element={<LoginPage />}/>
             <Route path="/cadastro" element={<CadastroPage />} />
-            
+            <Route path="/home" element={<NovaHome />} />
+
             <Route path="/dashboard" element={<TemplatePrivateRoute />}>
                 <Route path="/dashboard" element={<HomePage />}/>
                 <Route path="/dashboard/cadastrolocais" element={<CadastroLocais />}/>
