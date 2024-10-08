@@ -32,12 +32,12 @@ export function NovaHome() {
   }, []);
 
   return (
-   
+ 
     <div className="main-content">
       <Sidebar />
       <div className="stats">
         <div className="card-stats">
-          <p style={{ color: "white" }}>Usuários</p>
+          <p style={{ color: "white" }}>Usuários logados</p>
           <span className="fw-bolder fs-2">{usersCount}</span>
         </div>
         <div className="card-stats">
@@ -60,15 +60,8 @@ export function NovaHome() {
             <tbody>
               {locais.map((local) => (
                 <tr key={local.id}>
-                  <td>
-                    <Link
-                      to={`/dashboard/local/${local.id}`}
-                      className="local-link"
-                    >
-                      {local.nome}
-                    </Link>
-                  </td>
-                  <td>{local.descricao}`</td>
+                  <td>{local.nome}</td>
+                  <td>{local.descricao}</td>
                 </tr>
               ))}
             </tbody>
