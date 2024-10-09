@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export function ListaLocais() {
     const [locais, setLocais] = useState([]);
@@ -7,9 +8,8 @@ export function ListaLocais() {
     useEffect(() => {
         async function fetchLocais() {
             try {
-                const response = await fetch("http://localhost:3333/locais");
-                const data = await response.json();
-                setLocais(data);
+                const responseLocais = await axios.get("http://localhost:3000/local/all");
+                setLocais(responseLocais.data.listarAll);
             } catch (error) {
                 alert("Erro ao carregar os locais.");
             }
@@ -22,10 +22,8 @@ export function ListaLocais() {
         const confirmDelete = window.confirm("Tem certeza que deseja apagar este local?");
         if (confirmDelete) {
             try {
-                const response = await fetch(`http://localhost:3333/locais/${id}`, {
-                    method: "DELETE",
-                });
-                if (response.ok) {
+                const response = await axios.delete(`http://localhost:3000/local/${id}`);
+                if (response.status === 200) {
                     alert("Local apagado com sucesso!");
                     setLocais(locais.filter(local => local.id !== id));
                 } else {
