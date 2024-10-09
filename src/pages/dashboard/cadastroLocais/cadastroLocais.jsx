@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export function CadastroLocais() {
   const { register, handleSubmit, formState, setValue, watch } = useForm();
@@ -42,29 +43,44 @@ export function CadastroLocais() {
   }, [cep, setValue]);
 
   async function onSubmit(data) {
+    let token = localStorage.getItem('token')
     try {
-
       const userLoggedStorage = localStorage.getItem('@nature365:user');
+      let userId;
+
       if (userLoggedStorage) {
-        const user = JSON.parse(userLoggedStorage)[0];
-        data.usuario = user.nome;
+        const user = JSON.parse(userLoggedStorage);
+        userId = user.id;
       }
 
-      const response = await fetch("http://localhost:3333/locais", {
-        method: "POST",
+      const localData = {
+        nome: data.nome,
+        descricao: data.descricao,
+        cep: data.cep,
+        rua: data.rua,
+        bairro: data.bairro,
+        cidade: data.cidade,
+        uf: data.uf,
+        latitude: data.latitude,
+        longitude: data.longitude,
+        usuarios_id: userId
+      };
+
+      const response = await axios.post("http://localhost:3000/local", localData,{
         headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+          'Authorization': `${token}`,
+          'Content-Type': 'application/json'
+         }
       });
 
-      if (response.ok) {
+      if (response.status === 201) {
         alert("Local cadastrado com sucesso!");
         navigate("/dashboard");
       } else {
         alert("Erro ao cadastrar local.");
       }
     } catch (error) {
+      console.error("Erro no cadastro do local:", error);
       alert("Erro ao conectar com o servidor.");
     }
   }
