@@ -15,13 +15,14 @@ export function HomePage() {
   useEffect(() => {
     async function fetchData() {
       try {
-       
-        const responseUsers = await axios.get("http://localhost:3000/usuario");
+        
+        const responseUsers = await axios.get("http://localhost:3000/usuario/ativos");
         console.log(responseUsers.data);
-      
-        const loggedInUsers = responseUsers.data.filter(user => user.loggedIn);
-        setLoggedInUsersCount(loggedInUsers.length);
 
+        
+        setLoggedInUsersCount(responseUsers.data);
+
+        
         const responseLocais = await axios.get("http://localhost:3000/local/all");
         console.log(responseLocais.data.listarAll);
         setLocais(responseLocais.data.listarAll);
@@ -88,3 +89,4 @@ export function HomePage() {
     </div>
   );
 }
+
