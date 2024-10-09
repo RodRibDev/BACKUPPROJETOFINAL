@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./novaHome.css";
@@ -9,20 +10,23 @@ import { Sidebar } from "../../components/sidebar/sidebar";
 
 const initialCoord = [-27.593754013143972, -48.565280761841805];
 
-export function NovaHome() {
-  const [usersCount, setUsersCount] = useState(0);
+export function NovaHome() {  
+  const [loggedInUsersCount, setLoggedInUsersCount] = useState(0);
   const [locais, setLocais] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const responseUsers = await fetch("http://localhost:3333/users");
-        const usersData = await responseUsers.json();
-        setUsersCount(usersData.length);
+      
+        const responseUsers = await axios.get("http://localhost:3000/usuario/ativos");
+        console.log(responseUsers.data);
+      
+        setLoggedInUsersCount(responseUsers.data);
+        
+        const responseLocais = await axios.get("http://localhost:3000/local/all");
+        console.log(responseLocais.data.listarAll);
+        setLocais(responseLocais.data.listarAll);
 
-        const responseLocais = await fetch("http://localhost:3333/locais");
-        const locaisData = await responseLocais.json();
-        setLocais(locaisData);
       } catch (error) {
         console.error("Erro ao buscar os dados:", error);
       }
@@ -39,10 +43,10 @@ export function NovaHome() {
             <div className="stats">
         <div className="card-stats">
           <p style={{ color: "white" }}>Usuários logados</p>
-          <span className="fw-bolder fs-2">{usersCount}</span>
+          <span className="fw-bolder fs-2">{loggedInUsersCount}</span>
         </div>
         <div className="card-stats">
-          <p style={{ color: "white" }}>Locais cadastrados</p>
+          <p style={{ color: "white" }}>Locais</p>
           <span className="fw-bolder fs-2">{locais.length}</span>
         </div>
       </div>
