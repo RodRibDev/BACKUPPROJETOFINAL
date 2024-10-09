@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export function EditarLocal() {
   const { register, handleSubmit, formState, setValue, watch } = useForm();
@@ -13,9 +14,15 @@ export function EditarLocal() {
 
   useEffect(() => {
     async function fetchLocal() {
+      let token = localStorage.getItem('token');
       try {
-        const response = await fetch(`http://localhost:3333/locais/${id}`);
-        const data = await response.json();
+        const response = await axios.get(`http://localhost:3000/local/${id}`, {
+          headers: {
+            'Authorization': `${token}`,
+            'Content-Type': 'application/json',
+          },
+        });
+        const data = response.data.listarLocal;
 
         setValue("nome", data.nome);
         setValue("descricao", data.descricao);
@@ -45,7 +52,6 @@ export function EditarLocal() {
             `https://cep.awesomeapi.com.br/json/${cep}`
           );
           const data = await cepresponse.json();
-          console.log(data);
 
           if (data.address_name) {
             setValue("rua", data.address_name);
@@ -69,22 +75,28 @@ export function EditarLocal() {
   }, [cep, setValue]);
 
   async function onSubmit(data) {
+    let token = localStorage.getItem('token');
     try {
-      const userLoggedStorage = localStorage.getItem('@nature365:user');
-      if (userLoggedStorage) {
-        const user = JSON.parse(userLoggedStorage)[0];
-        data.usuario = user.nome;
-      }
+      const localData = {
+        nome: data.nome,
+        descricao: data.descricao,
+        cep: data.cep,
+        rua: data.rua,
+        bairro: data.bairro,
+        cidade: data.cidade,
+        uf: data.uf,
+        latitude: data.latitude,
+        longitude: data.longitude,
+      };
 
-      const response = await fetch(`http://localhost:3333/locais/${id}`, {
-        method: "PUT",
+      const response = await axios.put(`http://localhost:3000/local/${id}`, localData, {
         headers: {
-          "Content-Type": "application/json",
+          'Authorization': `${token}`,
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         alert("Local alterado com sucesso!");
         navigate("/dashboard");
       } else {
@@ -99,14 +111,10 @@ export function EditarLocal() {
     <div className="main-content">
       <div className="formSignin">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h1 className="h3 mb-3 fw-normal">
-            Altere os campos que desejar.
-          </h1>
+          <h1 className="h3 mb-3 fw-normal">Altere os campos que desejar.</h1>
 
           <div className="mb-3">
-            <label htmlFor="nome" className="form-label">
-              Nome do Local
-            </label>
+            <label htmlFor="nome" className="form-label">Nome do Local</label>
             <input
               type="text"
               className="form-control"
@@ -114,15 +122,11 @@ export function EditarLocal() {
               placeholder="Insira o nome do local"
               {...register("nome", { required: "Nome do local é obrigatório" })}
             />
-            {errors.nome && (
-              <span className="text-danger">{errors.nome.message}</span>
-            )}
+            {errors.nome && <span className="text-danger">{errors.nome.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="descricao" className="form-label">
-              Descrição
-            </label>
+            <label htmlFor="descricao" className="form-label">Descrição</label>
             <textarea
               className="form-control"
               id="descricao"
@@ -132,15 +136,11 @@ export function EditarLocal() {
                 required: "A descrição é obrigatória",
               })}
             ></textarea>
-            {errors.descricao && (
-              <span className="text-danger">{errors.descricao.message}</span>
-            )}
+            {errors.descricao && <span className="text-danger">{errors.descricao.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="cep" className="form-label">
-              CEP
-            </label>
+            <label htmlFor="cep" className="form-label">CEP</label>
             <input
               type="text"
               className="form-control"
@@ -148,15 +148,11 @@ export function EditarLocal() {
               placeholder="Insira o CEP do local"
               {...register("cep", { required: "CEP é obrigatório" })}
             />
-            {errors.cep && (
-              <span className="text-danger">{errors.cep.message}</span>
-            )}
+            {errors.cep && <span className="text-danger">{errors.cep.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="rua" className="form-label">
-              Rua
-            </label>
+            <label htmlFor="rua" className="form-label">Rua</label>
             <input
               type="text"
               className="form-control"
@@ -164,15 +160,11 @@ export function EditarLocal() {
               placeholder="Nome da rua"
               {...register("rua", { required: "Rua é obrigatória" })}
             />
-            {errors.rua && (
-              <span className="text-danger">{errors.rua.message}</span>
-            )}
+            {errors.rua && <span className="text-danger">{errors.rua.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="bairro" className="form-label">
-              Bairro
-            </label>
+            <label htmlFor="bairro" className="form-label">Bairro</label>
             <input
               type="text"
               className="form-control"
@@ -180,15 +172,11 @@ export function EditarLocal() {
               placeholder="Nome do bairro"
               {...register("bairro", { required: "Bairro é obrigatório" })}
             />
-            {errors.bairro && (
-              <span className="text-danger">{errors.bairro.message}</span>
-            )}
+            {errors.bairro && <span className="text-danger">{errors.bairro.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="cidade" className="form-label">
-              Cidade
-            </label>
+            <label htmlFor="cidade" className="form-label">Cidade</label>
             <input
               type="text"
               className="form-control"
@@ -196,15 +184,11 @@ export function EditarLocal() {
               placeholder="Nome da cidade"
               {...register("cidade", { required: "Cidade é obrigatória" })}
             />
-            {errors.cidade && (
-              <span className="text-danger">{errors.cidade.message}</span>
-            )}
+            {errors.cidade && <span className="text-danger">{errors.cidade.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="uf" className="form-label">
-              UF
-            </label>
+            <label htmlFor="uf" className="form-label">UF</label>
             <input
               type="text"
               className="form-control"
@@ -212,15 +196,11 @@ export function EditarLocal() {
               placeholder="UF"
               {...register("uf", { required: "UF é obrigatória" })}
             />
-            {errors.uf && (
-              <span className="text-danger">{errors.uf.message}</span>
-            )}
+            {errors.uf && <span className="text-danger">{errors.uf.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="latitude" className="form-label">
-              Latitude
-            </label>
+            <label htmlFor="latitude" className="form-label">Latitude</label>
             <input
               type="text"
               className="form-control"
@@ -230,31 +210,25 @@ export function EditarLocal() {
                 required: "A Latitude é obrigatória",
               })}
             />
-            {errors.latitude && (
-              <span className="text-danger">{errors.latitude.message}</span>
-            )}
+            {errors.latitude && <span className="text-danger">{errors.latitude.message}</span>}
           </div>
 
           <div className="mb-3">
-            <label htmlFor="longitude" className="form-label">
-              Longitude
-            </label>
+            <label htmlFor="longitude" className="form-label">Longitude</label>
             <input
               type="text"
               className="form-control"
               id="longitude"
               placeholder="Insira a Longitude"
               {...register("longitude", {
-                required: "A longitude é obrigatória",
+                required: "A Longitude é obrigatória",
               })}
             />
-            {errors.longitude && (
-              <span className="text-danger">{errors.longitude.message}</span>
-            )}
+            {errors.longitude && <span className="text-danger">{errors.longitude.message}</span>}
           </div>
 
           <button
-            className="btn btn-success w-100 py-2"
+            className="btn btn-primary w-100 py-2"
             type="submit"
             disabled={isSubmitting || loadingAddress}
           >
@@ -262,9 +236,7 @@ export function EditarLocal() {
               ? "Carregando..."
               : "Salvar Alterações"}
           </button>
-          <p className="mt-5 mb-3 text-body-secondary">
-            Natureza365 &copy; 2024
-          </p>
+          <p className="mt-5 mb-3 text-body-secondary">Natureza365 &copy; 2024</p>
           <p>
             Deseja ver os locais cadastrados?{" "}
             <Link to="/dashboard/listalocais" className="custom-link">
