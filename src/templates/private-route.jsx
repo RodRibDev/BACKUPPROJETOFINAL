@@ -42,13 +42,16 @@ export function TemplatePrivateRoute() {
         <div className="links-app">
           <ul className="nav-ul">
             <li>
-              <Link to="/dashboard" className="app-link" onClick={toggleMenu}>Home</Link>
+              <Link to="/home" className="app-link" onClick={toggleMenu}>Home</Link>
+            </li>
+            <li>
+              <Link to="/dashboard" className="app-link" onClick={toggleMenu}>Minha área</Link>
             </li>
             <li>
               <Link to="/dashboard/cadastroLocais" className="app-link" onClick={toggleMenu}>Cadastre Locais</Link>
             </li>
             <li>
-              <Link to="/dashboard/listaLocais" className="app-link" onClick={toggleMenu}>Lista</Link>
+              <Link to="/dashboard/listaLocais" className="app-link" onClick={toggleMenu}>Meus locais</Link>
             </li>
           </ul>
         </div>
