@@ -30,7 +30,13 @@ export function ListaLocais() {
         const confirmDelete = window.confirm("Tem certeza que deseja apagar este local?");
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`http://localhost:3000/local/${id}`);
+                const response = await axios.delete(`http://localhost:3000/local/${id}`,{
+                    headers: {
+                    'Authorization': `${token}`,
+                    'Content-Type': 'application/json'
+                    }
+            });
+    
                 if (response.status === 200) {
                     alert("Local apagado com sucesso!");
                     setLocais(locais.filter(local => local.id !== id));
