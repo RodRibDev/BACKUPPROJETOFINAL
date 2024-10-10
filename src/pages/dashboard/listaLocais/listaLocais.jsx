@@ -30,24 +30,30 @@ export function ListaLocais() {
         const confirmDelete = window.confirm("Tem certeza que deseja apagar este local?");
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`http://localhost:3000/local/${id}`,{
-                    headers: {
-                    'Authorization': `${token}`,
-                    'Content-Type': 'application/json'
-                    }
-            });
+
+                const token = localStorage.getItem('token');
     
-                if (response.status === 200) {
+                const response = await axios.delete(`http://localhost:3000/local/${id}`, {
+                    headers: {
+                        'Authorization': `${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+    
+ 
+                if (response.status === 204) {
                     alert("Local apagado com sucesso!");
                     setLocais(locais.filter(local => local.id !== id));
                 } else {
                     alert("Erro ao apagar o local.");
                 }
             } catch (error) {
+                console.log("Erro ao deletar local:", error.response ? error.response.data : error.message);
                 alert("Erro ao conectar com o servidor.");
             }
         }
     }
+    
 
     return (
         <div className="main-content">
