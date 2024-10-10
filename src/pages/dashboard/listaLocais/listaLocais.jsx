@@ -14,7 +14,6 @@ export function ListaLocais() {
                 try {
                     const responseLocais = await axios.get("http://localhost:3000/local/all");
                     
-                    // Ajuste: usando `usuarios_id` no filtro
                     const locaisFiltrados = responseLocais.data.listarAll.filter(local => local.usuarios_id === userId);
                     
                     setLocais(locaisFiltrados);
