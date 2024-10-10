@@ -4,19 +4,28 @@ import axios from "axios";
 
 export function ListaLocais() {
     const [locais, setLocais] = useState([]);
-
+    const userLoggedStorage = localStorage.getItem('@nature365:user');
+    const user = userLoggedStorage ? JSON.parse(userLoggedStorage) : null;
+    const userId = user ? user.id : null;
+    
     useEffect(() => {
-        async function fetchLocais() {
-            try {
-                const responseLocais = await axios.get("http://localhost:3000/local/all");
-                setLocais(responseLocais.data.listarAll);
-            } catch (error) {
-                alert("Erro ao carregar os locais.");
+        if (userId) {
+            async function fetchLocais() {
+                try {
+                    const responseLocais = await axios.get("http://localhost:3000/local/all");
+                    
+                    // Ajuste: usando `usuarios_id` no filtro
+                    const locaisFiltrados = responseLocais.data.listarAll.filter(local => local.usuarios_id === userId);
+                    
+                    setLocais(locaisFiltrados);
+                } catch (error) {
+                    alert("Erro ao carregar os locais.");
+                }
             }
-        }
 
-        fetchLocais();
-    }, []);
+            fetchLocais();
+        }
+    }, [userId]);
 
     async function handleDelete(id) {
         const confirmDelete = window.confirm("Tem certeza que deseja apagar este local?");
@@ -57,7 +66,7 @@ export function ListaLocais() {
                                         {local.nome}
                                     </Link>
                                 </td>
-                                <td>{local.usuario}</td>
+                                <td>{local.usuarios_id}</td>
                                 <td>
                                     <Link to={`/dashboard/editarlocal/${local.id}`}>
                                         <button className="btn btn-success">Editar</button>
