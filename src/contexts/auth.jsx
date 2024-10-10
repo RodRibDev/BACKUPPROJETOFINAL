@@ -41,12 +41,30 @@ export function AuthProvider({ children }) {
         }
     }
 
-    function signOut() {
-        
-        setUser(null);
-        localStorage.removeItem('@nature365:user');
-        localStorage.removeItem('token');
+    async function signOut() {
+        const token = localStorage.getItem('token');
+    
+        try {
+
+            await axios.post('http://localhost:3000/logout', {}, {
+                headers: {
+                    'Authorization': `${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+    
+            setUser(null);
+            localStorage.removeItem('@nature365:user');
+            localStorage.removeItem('token');
+            
+            alert("Logout realizado com sucesso!");
+    
+        } catch (error) {
+            console.error("Erro ao realizar logout:", error.response ? error.response.data : error.message);
+            alert("Erro ao realizar logout.");
+        }
     }
+    
 
     return (
         <AuthContext.Provider value={{ user, signIn, signOut }}>
