@@ -101,19 +101,19 @@ Para rodar o **Natureza365** em seu ambiente local, siga os passos abaixo:
 Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários e locais já salvos para facilicar a visualização da aplicação em funcionamento. Caso não deseje criar um novo usuário, os seguintes usuários e senhas podem ser utilizados para efetuar o login:
 
 - **email**: josue@gmail.com
-- **senha**: josue1234
+ **senha**: josue1234
 
 - **email**: rodrigo@gmail.com
-- **senha**: rodrigo1234
+ **senha**: rodrigo1234
 
 - **email**: leiliane@gmail.com
-- **senha**: leiliane1234
+ **senha**: leiliane1234
 
 - **email**: anaisa@gmail.com
-- **senha**: anaisa1234
+ **senha**: anaisa1234
 
 - **email**: bruno@gmail.com
-- **senha**: bruno1234
+ **senha**: bruno1234
 
 
 ## Estrutura das páginas
@@ -191,13 +191,12 @@ Desde já, agradecemos!
 ![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
 
 
-
  
-## 🖇️ Projeto orientado por:
+## Orientador do projeto 🖇️
 Profº Bruno Costa
 
 
-## ✒️ Projeto desenvolvido por:
+## Desenvolvedores do Squad 03 ✒️ 
 - ### Rodrigo Ribeiro
 - - [@RodRibDev](https://www.github.com/RodRibDev) 📫 rodrigo_r_ribeiro@estudante.sesisenai.org.br
 - ### Josué Santos
