@@ -1,9 +1,9 @@
-# Projeto final - Módulo 03 - FloripaMaisTec - FuturoDEV/Nature - Squad 3
+## Projeto final - Módulo 03 - FloripaMaisTec - FuturoDEV/Nature - **Squad 3**
 
 ## Descrição do Projeto 📌
 Aplicação de Front-End que compõe o projeto final do módulo 3 do curso Analista de Desenvolvimento Web do Sesi/Senai.
 
-# Natureza365 - Plataforma de Preservação da Natureza 🌳
+# API Rest **Natureza365** - *Plataforma de Preservação da Natureza* 🌳
 
 ## Apresentação 🌿
 Bem-vindo ao **Natureza365**, que foi desenvolvida com o objetivo de incentivar a preservação ambiental por meio de uma plataforma colaborativa, onde os usuários podem cadastrar locais de preservação da natureza e explorar os já existentes. A aplicação facilita o compartilhamento de informações sobre áreas naturais, trilhas, parques ecológicos, reservas ambientais, praias e outros locais de interesse e permite que os usuários contribuam para a conscientização e preservação desses locais.
@@ -24,7 +24,7 @@ Bem-vindo ao **Natureza365**, que foi desenvolvida com o objetivo de incentivar 
 
 
 ## Problema que Resolve
-O Natureza 365 resolve o problema de gerenciamento e organização de informações sobre locais da natureza, permitindo que os usuários cadastrem, visualizem listas de locais cadastrados, editem e excluam dados de forma eficiente e centralizada.
+O **Natureza365** resolve o problema de gerenciamento e organização de informações sobre locais da natureza, permitindo que os usuários cadastrem, visualizem listas de locais cadastrados, editem e excluam dados de forma eficiente e centralizada.
 
 
 ## Tela Dashboard
@@ -100,20 +100,20 @@ Para rodar o **Natureza365** em seu ambiente local, siga os passos abaixo:
 
 Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários e locais já salvos para facilicar a visualização da aplicação em funcionamento. Caso não deseje criar um novo usuário, os seguintes usuários e senhas podem ser utilizados para efetuar o login:
 
-**email**: josue@gmail.com
-**senha**: josue1234
+- **email**: josue@gmail.com
+- **senha**: josue1234
 
-**email**: rodrigo@gmail.com
-**senha**: rodrigo1234
+- **email**: rodrigo@gmail.com
+- **senha**: rodrigo1234
 
-**email**: leiliane@gmail.com
-**senha**: leiliane1234
+- **email**: leiliane@gmail.com
+- **senha**: leiliane1234
 
-**email**: anaisa@gmail.com
-**senha**: anaisa1234
+- **email**: anaisa@gmail.com
+- **senha**: anaisa1234
 
-**email**: bruno@gmail.com
-**senha**: bruno1234
+- **email**: bruno@gmail.com
+- **senha**: bruno1234
 
 
 ## Estrutura das páginas
@@ -161,7 +161,7 @@ A construção da aplicação colocou em prática e aprimorou os conhecimentos e
 
 
 ## Possíveis Melhorias
-Trata-se de uma primeira versão do aplicativo e muitas melhorias ainda podem ser impletamentas como a criação de uma página para exibição dos dados do usuário, assim como a possibilidade de alterar os dados e também deletar o usuário caso ele deseje e adição de imagens dos locais cadastrados.
+Trata-se de uma primeira versão do aplicativo e muitas melhorias ainda podem ser impletamentadas, como a criação de uma página para exibição dos dados do usuário, assim como a possibilidade de alterar os dados e também deletar o usuário caso ele deseje e adição de imagens dos locais cadastrados.
 
 Poderia ser implementada também pequenas melhorias de convivência para o usuário como uma mensagem de bem-vindo e a identificação do usuário dentro da aplicação com seu nome e email.
 
