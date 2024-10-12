@@ -112,8 +112,9 @@ Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários 
 ## Estrutura das páginas
 
 ### Home
-- Página inicial pública mostrando os locais cadastrados e a quantidade de usuários logados e locais.
+- Página inicial pública mostrando a quantidade de usuários logados e total de locais cadastrados.
 - Opções de redirecionamento para cadastro e login.
+- Lista todos os locais cadastrados.
 
 ### Login
 - Página para autenticação dos usuários
@@ -130,23 +131,19 @@ Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários 
 - Inclui link para detalhes dos locais cadastrados.
 - Inclui link para os locais cadastrados pelo usuário logado, com possibilidades de edição e deleção.
 
-
 ### Cadastro da Área de Preservação
 - Formulário para adicionar áreas de preservação
 - Uso da API de CEP para preencher dados de endereço automaticamente.
-
-### Listagem de áreas de preservação
-- Lista todos os locais cadastrados com opções de editar, visualizar e excluir.
 
 ### Edição de um local
 - Formulário já preenchido com os dados do local com possibilidade alteração de informações.
 
 
 ## Aprendizados
-
 A construção da aplicação colocou em prática e aprimorou os conhecimentos em programação como:
 
 - **Versionamento de código e uso do Github**
+- **Uso do Trello para organização de tarefas**
 - **Utilização de Tags e Elementos semânticos de HTML**
 - **Habilidade em CSS** como a utilização de seletores, estilos, layouts e flexbox
 - **JavaScript**: Variáveis, Tipos de dados, Operadores, Manipulação do DOM, Estrutura de Controle de Fluxo, Funções, Eventos, JSON, LocalStorage, Interval, Timeout, Operadores Rest e Spread, Módulos, Arrow Functions, Funções de Arrays, Funções Assíncronas e Fetch.
@@ -155,12 +152,15 @@ A construção da aplicação colocou em prática e aprimorou os conhecimentos e
 
 
 ## Possíveis Melhorias
+Trata-se de uma primeira versão do aplicativo e muitas melhorias ainda podem ser impletamentas como a criação de uma página para exibição dos dados do usuário, assim como a possibilidade de alterar os dados e também deletar o usuário caso ele deseje e adição de imagens dos locais cadastrados.
 
-Trata-se de uma primeira versão do aplicativo e muitas mellhorias ainda podem ser impletamentas como a criação de uma página para exibição dos dados do usuário, assim como a possibilidade de alterar os dados e também deletar o usuário caso ele deseje.
-
-Poderia ser implementada também pequenas melhorias de convivência para o usuário como uma mensagem de bem vindo e a identificação do usuário dentro da aplicação com seu nome e email.
+Poderia ser implementada também pequenas melhorias de convivência para o usuário como uma mensagem de bem-vindo e a identificação do usuário dentro da aplicação com seu nome e email.
 
 A aplicação poderia ter também um sistema de busca para que o usuário possa selecionar alguma área do mapa onde teria mais interesse em conhecer locais de preservação.
+
+Fiquem à vontade para sugerir ideias e nos ajudar a deixar o Natureza365 mais completo e funcional!
+
+Desde já, agradecemos!
 
 
 ## Screenshots
@@ -175,3 +175,17 @@ A aplicação poderia ter também um sistema de busca para que o usuário possa 
 ## Histórico Gitflow
 
 ![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
+
+
+ 
+## 🖇️ Projeto orientado por:
+Profº Bruno Costa
+
+ 
+## ✒️ Projeto desenvolvido por:
+- ### Rodrigo Ribeiro
+- - [@RodRibDev](https://www.github.com/RodRibDev) 📫 rodrigo_r_ribeiro@estudante.sesisenai.org.br
+- ### Josué Santos
+- - [@josuesantos7](https://www.github.com/josuesantos7)  📫  josuesantossantosvf@gmail.com
+- ### Leiliane Costa
+- - [@leilianelcs](https://www.github.com/leilianelcs)  📫  leilianelcs@gmail.com
