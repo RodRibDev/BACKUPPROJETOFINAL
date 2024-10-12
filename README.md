@@ -35,13 +35,21 @@ Imagem da aplicação rodando em conjunto com o projeto do Back-End:
 
 
 ## Funcionalidades
+
 - **Home**: Exibição do número de usuários logados, quantidade de locais cadastrados, lista com todos os locais cadastrados com opção de visualizar detalhes e sua localização.
+
 - **Cadastro de Usuários**: Permite que novos usuários se cadastrem na plataforma. O cadastro inclui informações como nome, sexo, CPF (único para cada usuário), data de nascimento, e-mail, senha e endereço.
+
 - **Login**: Sistema de autenticação para que os usuários acessem suas contas.
+
 - **Cadastro de Áreas de Preservação**: Usuários cadastrados podem adicionar novos locais de preservação, incluindo nome, descrição, endereço e coordenadas geográficas.
+
 - **Listagem de Locais**: Exibição dos locais cadastrados pelo usuário, com opção de visualizar detalhes, editar ou excluir os registros.
+
 - **Dashboard**: Exibição do número de usuários logados e locais cadastrados, além de uma visão geral dos dados da plataforma.
+
 - **Mapas e markers**: Exibição de um mapa na página home e na dashboard com todos os locais identificados com markers próprios que ao serem clicados exibem o nome e a descrição do local. Exibição também de um mapa único quando a página de um local específico é visualizado.
+
 - **Responsividade**: Todas as páginas do sistema são responsivas e se adapatam aos diferentes tamanhos de tela.
 
 
@@ -69,10 +77,9 @@ Para rodar o **Natureza365** em seu ambiente local, siga os passos abaixo:
 
 ### Passo a Passo
 
-Para testar localmente: 
+
 1. Clone o repositório da API Rest de integração com o Back-End e siga as instruções do repositório para rodar a aplicação:
-   ```bash
-   git clone https://github.com/FuturoDEV-Nature/M3P-BackEnd-Squad3.git
+- <https://github.com/FuturoDEV-Nature/M3P-BackEnd-Squad3>
 
 2. Clone este repositório:
    ```bash
@@ -139,6 +146,7 @@ Ao acessar a aplicação pela primeira vez o servidor vai iniciar com usuários 
 - Formulário já preenchido com os dados do local com possibilidade alteração de informações.
 
 
+
 ## Aprendizados
 A construção da aplicação colocou em prática e aprimorou os conhecimentos em programação como:
 
@@ -149,6 +157,7 @@ A construção da aplicação colocou em prática e aprimorou os conhecimentos e
 - **JavaScript**: Variáveis, Tipos de dados, Operadores, Manipulação do DOM, Estrutura de Controle de Fluxo, Funções, Eventos, JSON, LocalStorage, Interval, Timeout, Operadores Rest e Spread, Módulos, Arrow Functions, Funções de Arrays, Funções Assíncronas e Fetch.
 - **React**: Renderização de componentes, Props, Proptypes, Hooks, Eventos, Renderização de listas, React Router, Formulários, Prop Drilling, Composition, Estilos (Material UI e Boostrap), Developer Tools.
 - **Skills**: Organização, criação de documentação e apresentação de solução.
+
 
 
 ## Possíveis Melhorias
@@ -166,10 +175,15 @@ Desde já, agradecemos!
 ## Screenshots
 
 ![App Screenshot Login](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/01_qckzmw.png)
+
 ![App Screenshot Cadastro](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/02_kofbn7.png)
+
 ![App Screenshot Dashboard](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/03_smimlt.png)
+
 ![App Screenshot Mapa e Responsividade](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/04_of3zzy.png)
+
 ![App Screenshot Lista Responsiva](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723924567/05_p7lbtv.png)
+
 
 
 ## Histórico Gitflow
@@ -177,11 +191,12 @@ Desde já, agradecemos!
 ![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
 
 
+
  
 ## 🖇️ Projeto orientado por:
 Profº Bruno Costa
 
- 
+
 ## ✒️ Projeto desenvolvido por:
 - ### Rodrigo Ribeiro
 - - [@RodRibDev](https://www.github.com/RodRibDev) 📫 rodrigo_r_ribeiro@estudante.sesisenai.org.br
