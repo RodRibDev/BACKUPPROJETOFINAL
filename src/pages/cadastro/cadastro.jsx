@@ -3,6 +3,7 @@ import './cadastro.css';
 import logoPreta from "../../assets/logoNaturezaPto.png";
 import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export function CadastroPage() {
     const { register, handleSubmit, formState, setValue, watch } = useForm();
@@ -41,31 +42,33 @@ export function CadastroPage() {
 
     async function onSubmit(data) {
         try {
-            
-            const cpfResponse = await fetch(`http://localhost:3333/users?cpf=${data.cpf}`);
-            const cpfData = await cpfResponse.json();
-
-            if (cpfData.length > 0) {
-                alert("CPF já cadastrado no sistema.");
-                return;
-            }
-
-            const response = await fetch("http://localhost:3333/users", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
+            const response = await axios.post("http://localhost:3000/usuario", {
+                nome: data.nome,
+                cpf: data.cpf,
+                sexo: data.sexo,
+                cep: data.cep,
+                rua: data.rua,
+                bairro: data.bairro,
+                cidade: data.cidade,
+                uf: data.uf,
+                dataNascimento: data.dataNascimento,
+                email: data.email,
+                password: data.senha
             });
 
-            if (response.ok) {
+            if (response.status === 201) {
                 alert("Usuário cadastrado com sucesso!");
                 navigate("/");
             } else {
                 alert("Erro ao cadastrar usuário.");
             }
         } catch (error) {
-            alert("Erro ao conectar com o servidor.");
+            if (error.response && error.response.status === 409) {
+                alert("CPF já cadastrado no sistema.");
+            } else {
+                console.error(error);
+                alert("Erro ao conectar com o servidor.");
+            }
         }
     }
 
@@ -221,4 +224,3 @@ export function CadastroPage() {
         </div>
     );
 }
-

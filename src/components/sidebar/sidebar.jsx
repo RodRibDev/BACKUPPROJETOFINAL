@@ -1,12 +1,10 @@
-import { Outlet, Navigate, Link } from "react-router-dom";
-import { useAuth } from "../contexts/auth";
-import { LogOut, Menu } from "lucide-react";
-import "./private-route.css";
-import imglogo from "../assets/logoNaturezaBco.png";
+import { Outlet, Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import "./sidebar.css";
+import imglogo from "../../assets/logoNaturezaBco.png";
 import { useState, useEffect } from "react";
 
-export function TemplatePrivateRoute() {
-  const { user, signOut } = useAuth();
+export function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -29,8 +27,8 @@ export function TemplatePrivateRoute() {
     };
   }, []);
 
-  return user ? (
-    <div className={`container-private ${menuOpen && isMobile ? "menu-open" : ""}`}>
+  return (
+    <div className={`container-public ${menuOpen && isMobile ? "menu-open" : ""}`}>
       {isMobile && (
         <button className="menu-toggle" onClick={toggleMenu}>
           <Menu size={24} />
@@ -45,22 +43,12 @@ export function TemplatePrivateRoute() {
               <Link to="/home" className="app-link" onClick={toggleMenu}>Home</Link>
             </li>
             <li>
-              <Link to="/dashboard" className="app-link" onClick={toggleMenu}>Minha área</Link>
+              <Link to="/cadastro" className="app-link" onClick={toggleMenu}>Cadastre-se!</Link>
             </li>
             <li>
-              <Link to="/dashboard/cadastroLocais" className="app-link" onClick={toggleMenu}>Cadastre Locais</Link>
-            </li>
-            <li>
-              <Link to="/dashboard/listaLocais" className="app-link" onClick={toggleMenu}>Meus locais</Link>
+              <Link to="/login" className="app-link" onClick={toggleMenu}>Entrar</Link>
             </li>
           </ul>
-        </div>
-
-        <div className="div-desconectar">
-          <p style={{ color: 'white' }}>Desconectar</p>
-          <button className="btn btn-dark" onClick={signOut}>
-            <LogOut size={24} />
-          </button>
         </div>
       </div>
 
@@ -68,8 +56,5 @@ export function TemplatePrivateRoute() {
         <Outlet />
       </div>
     </div>
-  ) : (
-    <Navigate to="/" />
   );
 }
-

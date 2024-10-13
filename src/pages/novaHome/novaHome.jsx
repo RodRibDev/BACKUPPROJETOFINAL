@@ -1,27 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./home.css";
+import "./novaHome.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Marcadores } from "../../../components/Marcadores";
+import { Marcadores } from "../../components/Marcadores";
+import { Sidebar } from "../../components/sidebar/sidebar";
+
 
 const initialCoord = [-27.593754013143972, -48.565280761841805];
 
-export function HomePage() {
+export function NovaHome() {  
   const [loggedInUsersCount, setLoggedInUsersCount] = useState(0);
   const [locais, setLocais] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        
+      
         const responseUsers = await axios.get("http://localhost:3000/usuario/ativos");
         console.log(responseUsers.data);
-
-        
+      
         setLoggedInUsersCount(responseUsers.data);
-
         
         const responseLocais = await axios.get("http://localhost:3000/local/all");
         console.log(responseLocais.data.listarAll);
@@ -36,10 +36,13 @@ export function HomePage() {
   }, []);
 
   return (
-    <div className="main-content">
-      <div className="stats">
+    <div className="container-private">
+<Sidebar />
+    <div className="home-content">
+    <img className="img-home" src="../public/imgHome.png" alt="Logo" />
+            <div className="stats">
         <div className="card-stats">
-          <p style={{ color: "white" }}>Usuários Logados</p>
+          <p style={{ color: "white" }}>Usuários logados</p>
           <span className="fw-bolder fs-2">{loggedInUsersCount}</span>
         </div>
         <div className="card-stats">
@@ -62,14 +65,7 @@ export function HomePage() {
             <tbody>
               {locais.map((local) => (
                 <tr key={local.id}>
-                  <td>
-                    <Link
-                      to={`/dashboard/local/${local.id}`}
-                      className="local-link"
-                    >
-                      {local.nome}
-                    </Link>
-                  </td>
+                  <td>{local.nome}</td>
                   <td>{local.descricao}</td>
                 </tr>
               ))}
@@ -77,7 +73,6 @@ export function HomePage() {
           </table>
         </div>
       </div>
-
       <div className="mapa-locais">
         <h2>Mapa</h2>
         <p>Localização dos locais cadastrados</p>
@@ -87,6 +82,6 @@ export function HomePage() {
         </MapContainer>
       </div>
     </div>
+    </div>
   );
 }
-
