@@ -1,19 +1,50 @@
+.header {
+  display: flex;
+  background-color: rgb(249, 246, 246);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Mantém o header acima de outros elementos */
+}
+
+.d-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(4, 19, 8);
+  border-radius: 0;
+}
+
+.btn-header {
+  border-radius: 15px;
+  border-color: white;
+  background-color: #eef3ef;
+  font-weight: 700;
+  height: 48px;
+  width: 150px;
+}
+
+.btn-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .container-cadastro {
-  height: 100vh;
+  height: calc(100vh - 80px); 
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 60px; 
 }
+
 .formSignin {
   max-width: 720px;
   padding: 1rem;
-}
-
-.logoCadastro {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  padding-top: 40px;
 }
