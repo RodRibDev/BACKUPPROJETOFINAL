@@ -16,7 +16,7 @@ export function EditarLocal() {
     async function fetchLocal() {
       let token = localStorage.getItem('token');
       try {
-        const response = await axios.get(`http://localhost:3000/local/${id}`, {
+        const response = await axios.get(`https://m3p-backend-squad3-n6s0.onrender.com/local/${id}`, {
           headers: {
             'Authorization': `${token}`,
             'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ export function EditarLocal() {
         longitude: data.longitude,
       };
 
-      const response = await axios.put(`http://localhost:3000/local/${id}`, localData, {
+      const response = await axios.put(`https://m3p-backend-squad3-n6s0.onrender.com/local/${id}`, localData, {
         headers: {
           'Authorization': `${token}`,
           'Content-Type': 'application/json',
