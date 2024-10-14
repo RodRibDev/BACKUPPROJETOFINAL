@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
 
     async function signIn(data) {
         try {
-            const response = await axios.post("http://localhost:3000/login", {
+            const response = await axios.post("https://m3p-backend-squad3-n6s0.onrender.com/login", {
                 email: data.email,
                 password: data.senha
             });
@@ -46,7 +46,9 @@ export function AuthProvider({ children }) {
     
         try {
 
-            await axios.post('http://localhost:3000/logout', {}, {
+            await axios.post('https://m3p-backend-squad3-n6s0.onrender.com/logout', {},
+            
+            {
                 headers: {
                     'Authorization': `${token}`,
                     'Content-Type': 'application/json'
@@ -56,6 +58,8 @@ export function AuthProvider({ children }) {
             setUser(null);
             localStorage.removeItem('@nature365:user');
             localStorage.removeItem('token');
+
+            
             
             alert("Logout realizado com sucesso!");
     

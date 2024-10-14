@@ -66,7 +66,7 @@ export function CadastroLocais() {
         usuarios_id: userId
       };
 
-      const response = await axios.post("http://localhost:3000/local", localData,{
+      const response = await axios.post("https://m3p-backend-squad3-n6s0.onrender.com/local", localData,{
         headers: {
           'Authorization': `${token}`,
           'Content-Type': 'application/json'
