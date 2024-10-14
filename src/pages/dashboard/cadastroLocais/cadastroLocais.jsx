@@ -66,6 +66,8 @@ export function CadastroLocais() {
         usuarios_id: userId
       };
 
+      console.log('Dados enviados para o backend:', localData);
+
       const response = await axios.post("https://m3p-backend-squad3-j912.onrender.com/local", localData,{
         headers: {
           'Authorization': `${token}`,
