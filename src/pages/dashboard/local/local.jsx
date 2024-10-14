@@ -17,7 +17,7 @@ export function Local() {
       let token = localStorage.getItem('token');
       try {
       
-        const response = await axios.get(`https://m3p-backend-squad3-6iew.onrender.com/local/${id}`, {
+        const response = await axios.get(`https://m3p-backend-squad3-j912.onrender.com/local/${id}`, {
           headers: {
             'Authorization': `${token}`,
             'Content-Type': 'application/json',
