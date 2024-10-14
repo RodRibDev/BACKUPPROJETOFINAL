@@ -4,6 +4,7 @@ import logoPreta from "../../assets/logoNaturezaPto.png";
 import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from '../../components/Header/Header';
 
 export function CadastroPage() {
     const { register, handleSubmit, formState, setValue, watch } = useForm();
@@ -74,12 +75,10 @@ export function CadastroPage() {
 
     return (
         <div className='container-cadastro'>
+            <Header />
             <div className='formSignin'>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className='logoCadastro'>
-                        <img src={logoPreta} alt="Logomarca da aplicação" />
-                    </div>
-                    
+                                       
                     <h1 className="h3 mb-3 fw-normal">Preencha todos os campos para efetuar o cadastro.</h1>
                     
                     <div className="mb-3">
