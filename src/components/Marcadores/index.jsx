@@ -1,5 +1,16 @@
 import { useEffect } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
+import L from 'leaflet'
+import markerIcon from '../../assets/pin-green.png'
+import shadowIcon from '../../assets/pin-shadow.png'
+
+const customMarkerIcon = new L.Icon({
+    iconUrl: markerIcon,
+    shadowUrl: shadowIcon,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+});
 
 export function Marcadores({ locais }){
 
@@ -24,6 +35,7 @@ export function Marcadores({ locais }){
          <Marker
             key={local.id}
             position={[parseFloat(local.latitude), parseFloat(local.longitude)]}
+            icon={customMarkerIcon}
             >
             <Popup>
                 <strong>{local.nome}</strong>
@@ -34,4 +46,3 @@ export function Marcadores({ locais }){
         ))}
     </>
 }
-
