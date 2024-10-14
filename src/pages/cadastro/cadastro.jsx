@@ -43,7 +43,7 @@ export function CadastroPage() {
 
     async function onSubmit(data) {
         try {
-            const response = await axios.post("https://m3p-backend-squad3-n6s0.onrender.com/usuario", {
+            const response = await axios.post("https://m3p-backend-squad3-6iew.onrender.com/usuario", {
                 nome: data.nome,
                 cpf: data.cpf,
                 sexo: data.sexo,

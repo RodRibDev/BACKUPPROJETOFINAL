@@ -12,7 +12,7 @@ export function ListaLocais() {
         if (userId) {
             async function fetchLocais() {
                 try {
-                    const responseLocais = await axios.get("https://m3p-backend-squad3-n6s0.onrender.com/local/all");
+                    const responseLocais = await axios.get("https://m3p-backend-squad3-6iew.onrender.com/local/all");
                     
                     const locaisFiltrados = responseLocais.data.listarAll.filter(local => local.usuarios_id === userId);
                     
@@ -33,7 +33,7 @@ export function ListaLocais() {
 
                 const token = localStorage.getItem('token');
     
-                const response = await axios.delete(`https://m3p-backend-squad3-n6s0.onrender.com/local/${id}`, {
+                const response = await axios.delete(`https://m3p-backend-squad3-6iew.onrender.com/local/${id}`, {
                     headers: {
                         'Authorization': `${token}`,
                         'Content-Type': 'application/json'
