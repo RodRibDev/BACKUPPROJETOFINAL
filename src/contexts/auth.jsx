@@ -18,7 +18,7 @@ export function AuthProvider({ children }) {
 
     async function signIn(data) {
         try {
-            const response = await axios.post("https://m3p-backend-squad3-n6s0.onrender.com/login", {
+            const response = await axios.post("https://m3p-backend-squad3-6iew.onrender.com/login", {
                 email: data.email,
                 password: data.senha
             });
@@ -46,7 +46,7 @@ export function AuthProvider({ children }) {
     
         try {
 
-            await axios.post('https://m3p-backend-squad3-n6s0.onrender.com/logout', {},
+            await axios.post('https://m3p-backend-squad3-6iew.onrender.com/logout', {},
             
             {
                 headers: {
