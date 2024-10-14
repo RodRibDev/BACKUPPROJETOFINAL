@@ -18,12 +18,12 @@ export function NovaHome() {
     async function fetchData() {
       try {
       
-        const responseUsers = await axios.get("http://localhost:3000/usuario/ativos");
+        const responseUsers = await axios.get("https://m3p-backend-squad3-n6s0.onrender.com/usuario/ativos");
         console.log(responseUsers.data);
       
         setLoggedInUsersCount(responseUsers.data);
         
-        const responseLocais = await axios.get("http://localhost:3000/local/all");
+        const responseLocais = await axios.get("https://m3p-backend-squad3-n6s0.onrender.com/local/all");
         console.log(responseLocais.data.listarAll);
         setLocais(responseLocais.data.listarAll);
 
