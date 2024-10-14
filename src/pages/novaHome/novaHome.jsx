@@ -39,7 +39,7 @@ export function NovaHome() {
     <div className="container-private">
 <Sidebar />
     <div className="home-content">
-    <img className="img-home" src="../public/imgHome.png" alt="Logo" />
+    <img className="img-home" src="./imgHome.png" alt="Logo" />
             <div className="stats">
         <div className="card-stats">
           <p style={{ color: "white" }}>Usuários logados</p>

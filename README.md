@@ -188,9 +188,8 @@ Desde já, agradecemos!
 
 ## Histórico Gitflow
 
-![Screenshot Histórico de Commits e Merges](https://res.cloudinary.com/dfbwfvctj/image/upload/v1723988929/GIT_FLOW_ilbalo.png)
-
-
+![Screenshot Histórico de Commits e Merges](./src/assets/gitFlowFrontEnd.jpg)
+ 
  
 ## Orientador do projeto 🖇️
 Profº Bruno Costa
